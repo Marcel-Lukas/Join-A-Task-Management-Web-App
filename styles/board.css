@@ -1,4 +1,3 @@
-
 .board {
   padding: 80px 44px 20px 44px;
 }
@@ -49,7 +48,7 @@
   content: "Add Task";
 }
 
-.btn-add-task-mobile{
+.btn-add-task-mobile {
   visibility: hidden;
 }
 
@@ -106,7 +105,7 @@
   border-radius: 10px;
 }
 
-.task-not-found{
+.task-not-found {
   width: 100%;
   height: 48px;
   background-color: rgb(231, 231, 231);
@@ -258,7 +257,7 @@
   padding-right: 8px;
 }
 
-.singel-task-close-btn{
+.singel-task-close-btn {
   position: absolute;
   top: 24px;
   right: 36px;
@@ -399,7 +398,7 @@
   width: 100%;
   max-height: calc(100vh - 130px);
   background-color: rgb(246, 247, 248);
-  padding: 64px 74px;
+  padding: 20px 74px;
   border-radius: 30px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
   transform: translateX(100vh);
@@ -437,23 +436,21 @@
   color: rgb(204, 204, 204) !important ;
 }
 
-
-.edit-task-board-click{
-    height: 100vh;
-    align-items: center;
+.edit-task-board-click {
+  height: 100vh;
+  align-items: center;
 }
 
-.assignedTo{
+.assignedTo {
   overflow-y: scroll;
   min-height: 188px;
 }
 
 [id^="task_card_"] {
-    cursor: grab;
-    &:hover {
-        border: solid 2px rgba(0, 0, 0, 0.4);
-        transform: scale(1.05);
-        background-color: rgb(243, 243, 243);
-    }
+  cursor: grab;
+  &:hover {
+    border: solid 2px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+    background-color: rgb(243, 243, 243);
+  }
 }
-

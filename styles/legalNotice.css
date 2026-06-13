@@ -1,18 +1,18 @@
 .content-legal-notice {
-    gap: 30px;
-    color: black;
-    overflow-y: scroll;
-    margin-top: 96px;
-    cursor: default;
-    text-align: justify;
+  gap: 30px;
+  color: black;
+  overflow-y: scroll;
+  margin-top: 96px;
+  cursor: default;
+  text-align: justify;
 }
-  
+
 .content-legal-notice::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-  
+
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 h1 {
@@ -37,24 +37,25 @@ span {
 }
 
 .link {
-    color: rgba(50, 101, 173, 0.85);
-    cursor: pointer;
-    line-height: 20px;
-    font-weight: 500;
-    transition: 111ms ease-in-out;
+  color: rgba(50, 101, 173, 0.85);
+  cursor: pointer;
+  line-height: 20px;
+  font-weight: 500;
+  transition: 111ms ease-in-out;
 }
 
 .link:hover {
-    text-decoration: underline;
-    font-weight: 600;
-    font-style: italic;
-    font-size: 17px;
-    filter: drop-shadow(0px 0px 10px rgba(50, 101, 173, 0.7));
+  text-decoration: underline;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 17px;
+  filter: drop-shadow(0px 0px 10px rgba(50, 101, 173, 0.7));
 }
 
 .container {
   display: flex;
   min-height: 100vh;
+  max-width: 9vw;
 }
 
 .main-content {

@@ -9,14 +9,14 @@ let activeUser = getActiveUser();
  * @async
  * @function fetchData
  * @param {string} [path=""] - The relative path in the database to fetch from.
- * @returns {Promise<Array|null>} - Resolves to an array of data entries or null if no data is found.
+ * @returns {Promise<Array>} - Resolves to an array of data entries, or an empty array if no data is found.
  */
 async function fetchData(path = "") {
   const response = await fetch(`${BASE_URL}/${path}/.json`);
   const data = await response.json();
 
-  if (data === null) {
-    return null;
+  if (data === null || data === undefined) {
+    return [];
   }
 
   const dataArray = Array.isArray(data) ? data : Object.values(data);
@@ -155,7 +155,11 @@ function openLegal(linkToSide) {
  * Navigates the browser to the previous page in history.
  */
 function goBack() {
-  window.history.back();
+  if (window.history.length > 1) {
+    window.history.back();
+  } else {
+    window.location.href = "https://join.marcel-lukas.com/";
+  }
 }
 
 

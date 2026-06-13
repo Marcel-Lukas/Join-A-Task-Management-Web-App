@@ -145,6 +145,9 @@ function setTaskData(taskData, taskId) {
  * @returns {Promise<void>}
  */
 async function putTaskToUser(taskId) {
+  if (!Array.isArray(activeUser.tasks)) {
+    activeUser.tasks = [];
+  }
   if (!activeUser.tasks.includes(taskId)) {
     activeUser.tasks.push(taskId);
     localStorage.setItem("activeUser", JSON.stringify(activeUser));
@@ -209,9 +212,9 @@ function putTasksContent(title, description, dueDate, taskId, assignedTo, catego
 async function getContacts() {
   document.getElementById("contact_contant").innerHTML = "";
   let contacts = await fetchData("contacts");
-  let userContacts = activeUser.contacts;
+  let userContacts = activeUser.contacts || [];
   let contactsToRender = contacts.filter((contact) =>
-    userContacts.includes(contact.id)
+    contact && userContacts.includes(contact.id)
   );
   window.allContacts = contactsToRender;
   showContacts(contactsToRender);
@@ -227,9 +230,9 @@ async function updateSelectedContactsDisplay() {
   let newContacts = await fetchData("contacts");
   let selectedList = document.getElementById("selected_contacts");
   selectedList.innerHTML = "";
-  let userContacts = activeUser.contacts;
+  let userContacts = activeUser.contacts || [];
   let contactsToRender = newContacts.filter((contact) =>
-    userContacts.includes(contact.id)
+    contact && userContacts.includes(contact.id)
   );
   window.allContacts = contactsToRender;
   displaySelectedContacts(contactsToRender, selectedList);

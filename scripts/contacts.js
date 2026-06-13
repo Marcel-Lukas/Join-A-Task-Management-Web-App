@@ -47,8 +47,9 @@ async function filterUserContacts() {
   const activeUser = JSON.parse(localStorage.getItem("activeUser"));
   const data = await fetchData("contacts");
   const contacts = Object.values(data);
+  const userContactIds = (activeUser && activeUser.contacts) || [];
   const userContacts = contacts.filter((contact) =>
-    activeUser.contacts.includes(contact.id)
+    contact && userContactIds.includes(contact.id)
   );
   return userContacts;
 }
@@ -377,9 +378,14 @@ async function postNewContact() {
  */
 async function addContactToUser(contactId, activeUser) {
   const user = await searchForUser(activeUser.id);
-  if (user && !user.contacts.includes(contactId)) {
-    user.contacts.push(contactId);
-    await postData(`users/${user.id - 1}/`, { ...user });
+  if (user) {
+    if (!Array.isArray(user.contacts)) {
+      user.contacts = [];
+    }
+    if (!user.contacts.includes(contactId)) {
+      user.contacts.push(contactId);
+      await postData(`users/${user.id - 1}/`, { ...user });
+    }
   }
 }
 
@@ -391,6 +397,9 @@ async function addContactToUser(contactId, activeUser) {
  */
 function addContactToUserLocal(contactId) {
   const activeUser = JSON.parse(localStorage.getItem("activeUser"));
+  if (!Array.isArray(activeUser.contacts)) {
+    activeUser.contacts = [];
+  }
   activeUser.contacts.push(contactId);
   localStorage.setItem("activeUser", JSON.stringify(activeUser));
 }

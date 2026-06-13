@@ -214,12 +214,12 @@ li {
   display: none;
 }
 
-.list-item{
+.list-item {
   margin-bottom: 12px;
 }
 
 .list-item:hover .list-imgs-activ {
-  display: flex
+  display: flex;
 }
 
 .hover-circle-subtask-active:hover {
@@ -245,11 +245,11 @@ li {
 }
 
 .bottom-order {
-  max-width: 976px;
   display: flex;
   justify-content: space-between;
   background-color: rgb(246, 247, 248);
 }
+
 .bottom-edit-order {
   height: 56px;
   width: 100%;

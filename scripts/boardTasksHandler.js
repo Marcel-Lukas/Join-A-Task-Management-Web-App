@@ -46,10 +46,10 @@ async function renderTasksInStatusArea() {
  * @returns {Promise<Array>} An array of task objects that belong to the active user.
  */
 async function filterUserTasks() {
-  let userTasks = activeUser.tasks;
+  let userTasks = activeUser.tasks || [];
   let allTasks = await fetchData("tasks");
 
-  let tasksToRender = allTasks.filter((task) => userTasks.includes(task.id));
+  let tasksToRender = allTasks.filter((task) => task && userTasks.includes(task.id));
   return tasksToRender;
 }
 

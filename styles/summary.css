@@ -23,7 +23,7 @@ body {
   height: 59px;
 }
 
-.seperator-horizontal{
+.seperator-horizontal {
   visibility: hidden;
 }
 
@@ -55,7 +55,7 @@ span {
   color: #2a3647;
 }
 
-.header-span{
+.header-span {
   text-align: center;
   font-size: clamp(13px, 3vw, 20px);
   color: #2a3647;
@@ -283,4 +283,8 @@ span {
   flex-direction: column;
   font-size: clamp(24px, 5vw, 36px);
   border: none !important;
+}
+
+.summary {
+  padding-left: 50px;
 }

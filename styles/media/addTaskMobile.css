@@ -3,6 +3,7 @@
     padding-inline: 16px;
   }
 }
+
 @media screen and (max-width: 1280px) {
   .content-order {
     width: 800px;
@@ -12,23 +13,23 @@
     max-height: calc(100vh - 240px);
   }
 
-  .bottom-order{
+  .bottom-order {
     width: 780px;
   }
 
-  .dividing-bar{
+  .dividing-bar {
     margin: 0px 28px;
   }
 
-  .urgent-button{
+  .urgent-button {
     width: 112px;
   }
 
-  .clicked-medium{
+  .clicked-medium {
     width: 112px;
   }
 
-  .low-button{
+  .low-button {
     width: 112px;
   }
 }
@@ -40,125 +41,121 @@
 }
 
 @media screen and (max-width: 1060px) {
-
-  .dividing-bar{
+  .dividing-bar {
     margin: 0px 21px 0px 70px;
   }
 
-  .add-task-form-left{
+  .add-task-form-left {
     width: 340px;
   }
 
-  .add-task-form-right{
+  .add-task-form-right {
     width: 340px;
   }
 
-  .bottom-order{
+  .bottom-order {
     width: 660px;
   }
 
-  input{
+  input {
     width: 312px;
     padding-right: 0;
   }
 
-  .subtasks-container{
+  .subtasks-container {
     width: 312px;
   }
 
-  .category-container{
+  .category-container {
     width: 312px;
   }
 
-  .assigned-container{
+  .assigned-container {
     width: 312px;
   }
 
-  textarea{
+  textarea {
     width: 312px;
   }
 
-  .prio-span{
+  .prio-span {
     font-size: 16px;
   }
 
-  .add-task-form-left{
+  .add-task-form-left {
     width: 272px;
   }
 
-  .add-task-form-right{
+  .add-task-form-right {
     width: 320px;
   }
 
-  .prio-span{
+  .prio-span {
     font-size: 16px;
   }
 
-  .urgent-button{
+  .urgent-button {
     width: 92px;
   }
 
-  .clicked-medium{
+  .clicked-medium {
     width: 92px;
   }
 
-  .low-button{
+  .low-button {
     width: 92px;
   }
 }
 
 @media screen and (max-width: 935px) {
-
-  .div-button-order{
+  .div-button-order {
     flex-direction: row;
   }
 
-  .content-order{
+  .content-order {
     flex-direction: column;
     align-items: center;
   }
 
-  .bottom-order{
+  .bottom-order {
     width: 520px;
     align-items: center;
     .bottom-button-order {
-        margin-top: -10px;
-        z-index: 3333;
+      margin-top: -10px;
+      z-index: 3333;
     }
   }
 
-  .add-task-form-left{
+  .add-task-form-left {
     width: 500px;
   }
 
-  .add-task-form-right{
+  .add-task-form-right {
     width: 500px;
   }
 
-  input{
+  input {
     width: 360px;
   }
 
-  .assigned-container{
+  .assigned-container {
     width: 360px;
   }
 
-  .category-container{
+  .category-container {
     width: 360px;
   }
 
-  .subtasks-container{
+  .subtasks-container {
     width: 360px;
   }
 
-  textarea{
+  textarea {
     width: 360px;
   }
-  
 }
 
 @media screen and (max-width: 777px) {
-
   .add-task-h1 {
     font-size: 40px;
     position: absolute;
@@ -178,7 +175,7 @@
     left: 0px;
     padding: 8px 16px;
     .bottom-button-order {
-        margin-top: 0px;
+      margin-top: 0px;
     }
   }
   .content-order {
@@ -229,25 +226,24 @@
     font-size: clamp(12px, 4vw, 16px);
   }
 
-  .urgent-button{
+  .urgent-button {
     width: 112px;
   }
 
-  .clicked-medium{
+  .clicked-medium {
     width: 112px;
   }
 
-  .low-button{
+  .low-button {
     width: 112px;
   }
 
-  .bottom-order{
+  .bottom-order {
     justify-content: center;
   }
 }
 
 @media screen and (max-width: 516px) {
-
   .div-button-order {
     align-items: flex-start;
     flex-direction: column;
@@ -256,48 +252,70 @@
 }
 
 @media screen and (max-width: 500px) {
-
   ::-webkit-calendar-picker-indicator {
     height: 20px;
     width: 20px;
   }
 
-  input{
-    width: 248px;
+  input {
+    width: 80vw;
   }
 
-  .inputSubTask{
-    width: 247px;
+  .inputSubTask {
+    width: 80vw;
   }
 
-  textarea{
-    width: 248px;
+  textarea {
+    width: 80vw;
   }
 
-  .subtasks-container{
-    width: 248px;
+  .subtasks-container {
+    width: 80vw;
   }
 
-  .assigned-container{
-    width: 248px;
+  .assigned-container {
+    width: 80vw;
   }
 
-  .category-container{
-    width: 248px;
+  .category-container {
+    width: 80vw;
   }
 
-  .pos-rel{
-    width: 248px;
+  .pos-rel {
+    width: 80vw;
   }
 
-  .div-button-order{
+  .div-button-order {
     align-items: center;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  /* Der Scrollbalkenhintergrund */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  /* Der Scrollbalkengriff (Slider) */
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 8px;
+  }
+  /* Für Mozilla */
+  html {
+    scrollbar-color: transparent;
+    scrollbar-width: thin;
+  }
+  /* Hover-Effekt auf dem Scrollbalkengriff */
+  ::-webkit-scrollbar-thumb:hover {
+    cursor: default;
+    border: solid 0px transparent;
   }
 }
 
 @media screen and (max-width: 350px) {
-
-  button{
+  button {
     padding: 0;
   }
 }
